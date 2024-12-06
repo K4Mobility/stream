@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"sync"
 
+	"github.com/Workiva/go-datastructures/queue"
 	"github.com/pkg/errors"
-	"github.com/workiva/go-datastructures/queue"
 
-	"github.com/alexander-yu/stream/quantile/heap"
+	"github.com/K4Mobility/stream/quantile/heap"
 )
 
 // HeapMedian keeps track of the median of an entire stream using heaps.

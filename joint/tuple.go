@@ -6,7 +6,7 @@ import (
 	multierror "github.com/hashicorp/go-multierror"
 	"github.com/pkg/errors"
 
-	mathutil "github.com/alexander-yu/stream/util/math"
+	mathutil "github.com/K4Mobility/stream/util/math"
 )
 
 // Tuple represents a vector of integers, which
@@ -105,11 +105,13 @@ func pow(x []float64, n Tuple) (float64, error) {
 // the last element of the tuple first, and then incrementing the others
 // until those options are exhausted. For example, for tuple = Tuple{2, 3},
 // this is equivalent to the following (when iterating in increasing order):
-//  for j := 0; j <= tuple[1], j++ {
-//	    for i := 0; i <= tuple[0]; i++ {
-//          cb(i, j)
-//      }
-//  }
+//
+//	 for j := 0; j <= tuple[1], j++ {
+//		    for i := 0; i <= tuple[0]; i++ {
+//	         cb(i, j)
+//	     }
+//	 }
+//
 // This execution order (rather than the expected one of having i on the
 // outer loop) is due to the recursive nature of iter, and fact that it is
 // faster to append arguments at the end rather than insert them at the beginning.

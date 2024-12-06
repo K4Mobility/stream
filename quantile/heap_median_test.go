@@ -9,8 +9,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/alexander-yu/stream/quantile/heap"
-	testutil "github.com/alexander-yu/stream/util/test"
+	"github.com/K4Mobility/stream/quantile/heap"
+	testutil "github.com/K4Mobility/stream/util/test"
 )
 
 func TestNewHeapMedian(t *testing.T) {

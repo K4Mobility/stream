@@ -5,7 +5,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/alexander-yu/stream"
+	"github.com/K4Mobility/stream"
 )
 
 // EWMCov is a metric that tracks the sample exponentially weighted covariance.

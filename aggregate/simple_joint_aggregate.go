@@ -3,7 +3,7 @@ package aggregate
 import (
 	"sync"
 
-	"github.com/alexander-yu/stream"
+	"github.com/K4Mobility/stream"
 	multierror "github.com/hashicorp/go-multierror"
 	"github.com/pkg/errors"
 )

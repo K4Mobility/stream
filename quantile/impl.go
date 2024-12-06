@@ -3,10 +3,10 @@ package quantile
 import (
 	"github.com/pkg/errors"
 
-	"github.com/alexander-yu/stream/quantile/order"
-	"github.com/alexander-yu/stream/quantile/ost/avl"
-	"github.com/alexander-yu/stream/quantile/ost/rb"
-	"github.com/alexander-yu/stream/quantile/skiplist"
+	"github.com/K4Mobility/stream/quantile/order"
+	"github.com/K4Mobility/stream/quantile/ost/avl"
+	"github.com/K4Mobility/stream/quantile/ost/rb"
+	"github.com/K4Mobility/stream/quantile/skiplist"
 )
 
 // Impl represents an enum that enumerates the currently supported implementations

@@ -38,7 +38,7 @@ provided in the library.
 
 ## Statistics
 
-### [Quantile](https://godoc.org/github.com/alexander-yu/stream/quantile)
+### [Quantile](https://godoc.org/github.com/K4Mobility/stream/quantile)
 
 #### Quantile
 
@@ -72,7 +72,7 @@ Let `n` be the size of the window, or the stream if tracking the global median. 
 | :---------: | :----------: | :----: |
 | `O(log n)`  | `O(1)`       | `O(n)` |
 
-### [Min/Max](https://godoc.org/github.com/alexander-yu/stream/minmax)
+### [Min/Max](https://godoc.org/github.com/K4Mobility/stream/minmax)
 
 #### Min
 
@@ -90,7 +90,7 @@ Let `n` be the size of the window, or the stream if tracking the global maximum.
 | :----------------: | :----------------: | :---------------------------: |
 | `O(1)` (amortized) | `O(1)` (amortized) | `O(1)` if global, else `O(n)` |
 
-### [Moment-Based Statistics](https://godoc.org/github.com/alexander-yu/stream/moment)
+### [Moment-Based Statistics](https://godoc.org/github.com/K4Mobility/stream/moment)
 
 #### Mean
 
@@ -166,7 +166,7 @@ Let `n` be the size of the window, or the stream if tracking the global sums; le
 
 The reason that the `Push` method has a time complexity of `O(k^2)` is due to the algorithm being used to update the power sums; while the traditional `O(k)` method involves simply keeping track of raw power sums (i.e. non-centralized) and then representing the centralized power sum as a linear combination of the raw power sums and the mean (by doing binomial expansion), this is prone to underflow/overflow and as a result is much less numerically stable. See [1] for the paper whose algorithm this library uses, and a more in-depth explanation of the above.
 
-### [Joint Distribution Statistics](https://godoc.org/github.com/alexander-yu/stream/joint)
+### [Joint Distribution Statistics](https://godoc.org/github.com/K4Mobility/stream/joint)
 
 #### Cov
 

@@ -5,8 +5,8 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/alexander-yu/stream/quantile/ost/rb"
-	testutil "github.com/alexander-yu/stream/util/test"
+	"github.com/K4Mobility/stream/quantile/ost/rb"
+	testutil "github.com/K4Mobility/stream/util/test"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -6,7 +6,7 @@ import (
 	multierror "github.com/hashicorp/go-multierror"
 	"github.com/pkg/errors"
 
-	"github.com/alexander-yu/stream"
+	"github.com/K4Mobility/stream"
 )
 
 // SimpleAggregateMetric is a wrapper metric that tracks multiple univariate single-value metrics simultaneously.

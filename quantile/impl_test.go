@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/alexander-yu/stream/quantile/skiplist"
+	"github.com/K4Mobility/stream/quantile/skiplist"
 )
 
 func TestImplInit(t *testing.T) {

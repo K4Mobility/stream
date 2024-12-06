@@ -1,6 +1,6 @@
 package rb
 
-import "github.com/alexander-yu/stream/quantile/order"
+import "github.com/K4Mobility/stream/quantile/order"
 
 // Tree implements a red-black tree data structure,
 // and also satisfies the st.Tree interface,

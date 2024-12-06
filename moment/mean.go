@@ -50,7 +50,7 @@ func (m *Mean) String() string {
 // Push adds a new value for Mean to consume.
 func (m *Mean) Push(x float64) error {
 	if !m.IsSetCore() {
-		return errors.New("Core is not set")
+		return ErrorCoreNotSet
 	}
 
 	err := m.core.Push(x)
@@ -63,7 +63,7 @@ func (m *Mean) Push(x float64) error {
 // Value returns the value of the mean.
 func (m *Mean) Value() (float64, error) {
 	if !m.IsSetCore() {
-		return 0, errors.New("Core is not set")
+		return 0, ErrorCoreNotSet
 	}
 
 	m.core.RLock()
@@ -71,6 +71,9 @@ func (m *Mean) Value() (float64, error) {
 
 	mean, err := m.core.Mean()
 	if err != nil {
+		if errors.Cause(err) == ErrorNoValuesSeen {
+			return 0, ErrorRetrievingSumDueToNoValuesSeen
+		}
 		return 0, errors.Wrap(err, "error retrieving sum")
 	}
 	return mean, nil

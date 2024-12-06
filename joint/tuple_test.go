@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	testutil "github.com/alexander-yu/stream/util/test"
+	testutil "github.com/K4Mobility/stream/util/test"
 )
 
 func TestAbs(t *testing.T) {

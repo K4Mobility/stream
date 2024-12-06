@@ -5,7 +5,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/alexander-yu/stream"
+	"github.com/K4Mobility/stream"
 )
 
 // EWMA is a metric that tracks the exponentially weighted moving average.

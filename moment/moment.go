@@ -72,7 +72,7 @@ func (m *Moment) Push(x float64) error {
 // Value returns the value of the kth sample central moment.
 func (m *Moment) Value() (float64, error) {
 	if !m.IsSetCore() {
-		return 0, errors.New("Core is not set")
+		return 0, ErrorCoreNotSet
 	}
 
 	m.core.RLock()
@@ -80,7 +80,7 @@ func (m *Moment) Value() (float64, error) {
 
 	moment, err := m.core.Sum(m.k)
 	if err != nil {
-		return 0, errors.Wrap(err, "error retrieving sum")
+		return 0, ErrorRetrievingSum
 	}
 
 	count := m.core.Count()
@@ -95,3 +95,13 @@ func (m *Moment) Clear() {
 		m.core.Clear()
 	}
 }
+
+var (
+	ErrorNoValuesSeen                   = errors.New("no values seen yet")
+	ErrorNotTracked                     = errors.New("not a tracked power sum")
+	ErrorPoppingQueue                   = errors.New("error popping item from queue")
+	ErrorCoreNotSet                     = errors.New("Core is not set")
+	ErrorRetrievingSum                  = errors.New("error retrieving sum")
+	ErrorRetrievingSumDueToNoValuesSeen = errors.Wrap(ErrorNoValuesSeen, "error retrieving sum")
+	ErrorRetrievingVariance             = errors.New("error retrieving variance")
+)

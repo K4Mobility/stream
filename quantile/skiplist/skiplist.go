@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/alexander-yu/stream/quantile/order"
+	"github.com/K4Mobility/stream/quantile/order"
 	"github.com/pkg/errors"
 )
 

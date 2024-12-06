@@ -1,6 +1,6 @@
 package moment
 
-import "github.com/alexander-yu/stream"
+import "github.com/K4Mobility/stream"
 
 // Metric is the interface for a metric that tracks the moment of a stream.
 // Any Metric that will actually be consuming values (i.e. will have its Push

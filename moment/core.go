@@ -4,10 +4,10 @@ import (
 	"math"
 	"sync"
 
+	"github.com/Workiva/go-datastructures/queue"
 	"github.com/pkg/errors"
-	"github.com/workiva/go-datastructures/queue"
 
-	mathutil "github.com/alexander-yu/stream/util/math"
+	mathutil "github.com/K4Mobility/stream/util/math"
 )
 
 // Core is a struct that stores fundamental information for moments of a stream.
@@ -77,7 +77,7 @@ func (c *Core) UnsafePush(x float64) error {
 		if c.queue.Len() == uint64(c.window) {
 			tail, err := c.queue.Get()
 			if err != nil {
-				return errors.Wrap(err, "error popping item from queue")
+				return ErrorPoppingQueue
 			}
 
 			c.remove(tail.(float64))
@@ -210,7 +210,7 @@ func (c *Core) Mean() (float64, error) {
 // plans to make use of the [R]Lock()/[R]Unlock() Core methods.
 func (c *Core) UnsafeMean() (float64, error) {
 	if c.count == 0 {
-		return 0, errors.New("no values seen yet")
+		return 0, ErrorNoValuesSeen
 	}
 
 	return c.mean, nil
@@ -230,7 +230,7 @@ func (c *Core) Sum(k int) (float64, error) {
 // plans to make use of the [R]Lock()/[R]Unlock() Core methods.
 func (c *Core) UnsafeSum(k int) (float64, error) {
 	if c.count == 0 {
-		return 0, errors.New("no values seen yet")
+		return 0, ErrorNoValuesSeen
 	}
 
 	if k <= 0 || k >= len(c.sums) {
@@ -257,8 +257,7 @@ func (c *Core) UnsafeClear() {
 
 	c.count = 0
 	c.mean = 0
-	c.queue.Dispose()
-	c.queue = queue.NewRingBuffer(uint64(c.window))
+	c.queue.Reset()
 }
 
 // RLock locks the core internals for reading.

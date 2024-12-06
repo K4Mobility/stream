@@ -1,10 +1,10 @@
 # Stream
 
-[![GoDoc](https://godoc.org/github.com/alexander-yu/stream?status.svg)](https://godoc.org/github.com/alexander-yu/stream)
+[![GoDoc](https://godoc.org/github.com/K4Mobility/stream?status.svg)](https://godoc.org/github.com/K4Mobility/stream)
 [![Build Status](https://travis-ci.org/alexander-yu/stream.svg?branch=master)](https://travis-ci.org/alexander-yu/stream)
-[![Go Report Card](https://goreportcard.com/badge/github.com/alexander-yu/stream)](https://goreportcard.com/report/github.com/alexander-yu/stream)
+[![Go Report Card](https://goreportcard.com/badge/github.com/K4Mobility/stream)](https://goreportcard.com/report/github.com/K4Mobility/stream)
 [![codecov](https://codecov.io/gh/alexander-yu/stream/branch/master/graph/badge.svg)](https://codecov.io/gh/alexander-yu/stream)
-[![GitHub license](https://img.shields.io/github/license/alexander-yu/stream.svg)](https://github.com/alexander-yu/stream/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/alexander-yu/stream.svg)](https://github.com/K4Mobility/stream/blob/master/LICENSE)
 
 Stream is a Go library for online statistical algorithms. Provided statistics can be computed globally over an entire stream, or over a rolling window.
 
@@ -50,12 +50,12 @@ Stream is a Go library for online statistical algorithms. Provided statistics ca
 Use `go get`:
 
 ```bash
-go get github.com/alexander-yu/stream
+go get github.com/K4Mobility/stream
 ```
 
 ## Example Usage
 
-In-depth examples are provided in the [examples](https://github.com/alexander-yu/stream/tree/master/examples) directory, but a small taste is provided below:
+In-depth examples are provided in the [examples](https://github.com/K4Mobility/stream/tree/master/examples) directory, but a small taste is provided below:
 
 ```go
 // tracks the autocorrelation over a
@@ -94,7 +94,7 @@ fmt.Println("%s: %f", median.String(), medianVal)
 
 For time/space complexity details on the algorithms listed below, see [here](complexity.md).
 
-### [Quantile](https://godoc.org/github.com/alexander-yu/stream/quantile)
+### [Quantile](https://godoc.org/github.com/K4Mobility/stream/quantile)
 
 #### Quantile
 
@@ -112,7 +112,7 @@ IQR keeps track of the [interquartile range](https://en.wikipedia.org/wiki/Inter
 
 HeapMedian keeps track of the median of a stream with a pair of [heaps](https://en.wikipedia.org/wiki/Heap_(data_structure)). In particular, it uses a max-heap and a min-heap to keep track of elements below and above the median, respectively. HeapMedian can calculate the global median of a stream, or over a rolling window.
 
-### [Min/Max](https://godoc.org/github.com/alexander-yu/stream/minmax)
+### [Min/Max](https://godoc.org/github.com/K4Mobility/stream/minmax)
 
 #### Min
 
@@ -122,7 +122,7 @@ Min keeps track of the minimum of a stream; it can track either the global minim
 
 Max keeps track of the maximum of a stream; it can track either the global maximum, or over a rolling window.
 
-### [Moment-Based Statistics](https://godoc.org/github.com/alexander-yu/stream/moment)
+### [Moment-Based Statistics](https://godoc.org/github.com/K4Mobility/stream/moment)
 
 #### Mean
 
@@ -182,9 +182,9 @@ config := &moment.CoreConfig{
 core, err := NewCore(config)
 ```
 
-See the [godoc](https://godoc.org/github.com/alexander-yu/stream/moment#Core) entry for more details on Core's methods.
+See the [godoc](https://godoc.org/github.com/K4Mobility/stream/moment#Core) entry for more details on Core's methods.
 
-### [Joint Distribution Statistics](https://godoc.org/github.com/alexander-yu/stream/joint)
+### [Joint Distribution Statistics](https://godoc.org/github.com/K4Mobility/stream/joint)
 
 #### Cov
 
@@ -229,9 +229,9 @@ config := &joint.CoreConfig{
 core, err := NewCore(config)
 ```
 
-See the [godoc](https://godoc.org/github.com/alexander-yu/stream/joint#Core) entry for more details on Core's methods.
+See the [godoc](https://godoc.org/github.com/K4Mobility/stream/joint#Core) entry for more details on Core's methods.
 
-### [Aggregate Statistics](https://godoc.org/github.com/alexander-yu/stream/aggregate)
+### [Aggregate Statistics](https://godoc.org/github.com/K4Mobility/stream/aggregate)
 
 #### SimpleAggregateMetric
 

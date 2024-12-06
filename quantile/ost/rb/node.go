@@ -5,7 +5,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/alexander-yu/stream/quantile/order"
+	"github.com/K4Mobility/stream/quantile/order"
 )
 
 // Color represents the color of the node.
@@ -289,10 +289,11 @@ func (n *Node) Rank(val float64) int {
 // │   ┌── 6.000000
 // │   │   └── 5.000000
 // └── 4.000000
-//     │   ┌── 3.000000
-//     └── 2.000000
-//         └── 1.000000
-//             └── 1.000000
+//
+//	│   ┌── 3.000000
+//	└── 2.000000
+//	    └── 1.000000
+//	        └── 1.000000
 func (n *Node) treeString(prefix string, result string, isTail bool) string {
 	// isTail indicates whether or not the current node's parent branch needs to be represented
 	// as a "tail", i.e. its branch needs to hang in the string representation, rather than branch upwards.
