@@ -95,3 +95,11 @@ func (m *Moment) Clear() {
 		m.core.Clear()
 	}
 }
+
+var (
+	ErrorNoValuesSeen                   = errors.New("no values seen yet")
+	ErrorNotTracked                     = errors.New("not a tracked power sum")
+	ErrorPoppingQueue                   = errors.New("error popping item from queue")
+	ErrorCoreNotSet                     = errors.New("Core is not set")
+	ErrorRetrievingSumDueToNoValuesSeen = errors.Wrap(ErrorNoValuesSeen, "error retrieving sum")
+)

@@ -5,9 +5,9 @@ import (
 	"math"
 	"sync"
 
+	"github.com/Workiva/go-datastructures/queue"
 	"github.com/gammazero/deque"
 	"github.com/pkg/errors"
-	"github.com/workiva/go-datastructures/queue"
 )
 
 // Max keeps track of the maximum of a stream.

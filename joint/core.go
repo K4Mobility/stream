@@ -4,8 +4,8 @@ import (
 	"math"
 	"sync"
 
+	"github.com/Workiva/go-datastructures/queue"
 	"github.com/pkg/errors"
-	"github.com/workiva/go-datastructures/queue"
 
 	"github.com/alexander-yu/stream"
 	mathutil "github.com/alexander-yu/stream/util/math"

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/Workiva/go-datastructures/queue"
 	"github.com/pkg/errors"
-	"github.com/workiva/go-datastructures/queue"
 )
 
 // Autocov is a metric that tracks the sample autocovariance.

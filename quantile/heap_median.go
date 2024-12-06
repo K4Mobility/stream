@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"sync"
 
+	"github.com/Workiva/go-datastructures/queue"
 	"github.com/pkg/errors"
-	"github.com/workiva/go-datastructures/queue"
 
 	"github.com/alexander-yu/stream/quantile/heap"
 )

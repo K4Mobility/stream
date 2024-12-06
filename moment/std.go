@@ -48,7 +48,7 @@ func (s *Std) String() string {
 // Push adds a new value for Std to consume.
 func (s *Std) Push(x float64) error {
 	if !s.IsSetCore() {
-		return errors.New("Core is not set")
+		return ErrorCoreNotSet
 	}
 
 	err := s.variance.Push(x)
@@ -61,7 +61,7 @@ func (s *Std) Push(x float64) error {
 // Value returns the value of the sample standard deviation.
 func (s *Std) Value() (float64, error) {
 	if !s.IsSetCore() {
-		return 0, errors.New("Core is not set")
+		return 0, ErrorCoreNotSet
 	}
 
 	variance, err := s.variance.Value()

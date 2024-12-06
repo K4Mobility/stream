@@ -6,9 +6,9 @@ import (
 	"strings"
 	"sync"
 
+	"github.com/Workiva/go-datastructures/queue"
 	"github.com/alexander-yu/stream/quantile/order"
 	"github.com/pkg/errors"
-	"github.com/workiva/go-datastructures/queue"
 )
 
 // Quantile keeps track of the quantile of a stream using order statistics.
