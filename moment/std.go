@@ -66,7 +66,7 @@ func (s *Std) Value() (float64, error) {
 
 	variance, err := s.variance.Value()
 	if err != nil {
-		return 0, errors.Wrap(err, "error retrieving 2nd moment")
+		return 0, ErrorRetrievingVariance
 	}
 	return math.Sqrt(variance), nil
 }
