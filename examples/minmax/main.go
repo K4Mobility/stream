@@ -8,8 +8,8 @@ import (
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/alexander-yu/stream"
-	"github.com/alexander-yu/stream/minmax"
+	"github.com/K4Mobility/stream"
+	"github.com/K4Mobility/stream/minmax"
 )
 
 func push(metrics []stream.SimpleMetric) error {

@@ -6,8 +6,8 @@ import (
 	"strings"
 	"sync"
 
+	"github.com/K4Mobility/stream/quantile/order"
 	"github.com/Workiva/go-datastructures/queue"
-	"github.com/alexander-yu/stream/quantile/order"
 	"github.com/pkg/errors"
 )
 

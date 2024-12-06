@@ -8,7 +8,7 @@ import (
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/alexander-yu/stream/moment"
+	"github.com/K4Mobility/stream/moment"
 )
 
 // all metrics in the moment package must be passed through moment.Init

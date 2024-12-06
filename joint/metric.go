@@ -1,6 +1,6 @@
 package joint
 
-import "github.com/alexander-yu/stream"
+import "github.com/K4Mobility/stream"
 
 // Metric is the interface for a metric that tracks joint statistics of a stream.
 // Any Metric that will actually be consuming values (i.e. will have its Push

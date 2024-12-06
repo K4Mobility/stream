@@ -6,7 +6,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/alexander-yu/stream"
+	"github.com/K4Mobility/stream"
 )
 
 // EWMCorr is a metric that tracks the sample Pearson correlation coefficient.

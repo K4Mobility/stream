@@ -6,7 +6,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/alexander-yu/stream"
+	"github.com/K4Mobility/stream"
 )
 
 // EWMMoment is a metric that tracks the kth exponentially weighted sample central moment.

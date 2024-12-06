@@ -8,7 +8,7 @@ import (
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/alexander-yu/stream/joint"
+	"github.com/K4Mobility/stream/joint"
 )
 
 // all metrics in the joint package must be passed through joint.Init

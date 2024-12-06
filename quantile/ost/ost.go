@@ -1,7 +1,7 @@
 package ost
 
 import (
-	"github.com/alexander-yu/stream/quantile/order"
+	"github.com/K4Mobility/stream/quantile/order"
 )
 
 // Tree is the interface for order statistic trees, which are variants of binary trees

@@ -8,8 +8,8 @@ import (
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/alexander-yu/stream"
-	"github.com/alexander-yu/stream/quantile"
+	"github.com/K4Mobility/stream"
+	"github.com/K4Mobility/stream/quantile"
 )
 
 func push(metrics []stream.Metric) error {

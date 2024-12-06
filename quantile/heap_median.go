@@ -8,7 +8,7 @@ import (
 	"github.com/Workiva/go-datastructures/queue"
 	"github.com/pkg/errors"
 
-	"github.com/alexander-yu/stream/quantile/heap"
+	"github.com/K4Mobility/stream/quantile/heap"
 )
 
 // HeapMedian keeps track of the median of an entire stream using heaps.

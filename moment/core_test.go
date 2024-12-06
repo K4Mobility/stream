@@ -8,8 +8,8 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/alexander-yu/stream"
-	testutil "github.com/alexander-yu/stream/util/test"
+	"github.com/K4Mobility/stream"
+	testutil "github.com/K4Mobility/stream/util/test"
 )
 
 type mockWrapper struct {

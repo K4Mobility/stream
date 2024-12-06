@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 
-	testutil "github.com/alexander-yu/stream/util/test"
+	testutil "github.com/K4Mobility/stream/util/test"
 )
 
 func TestNewCorr(t *testing.T) {

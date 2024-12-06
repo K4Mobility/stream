@@ -1,4 +1,4 @@
-module github.com/alexander-yu/stream
+module github.com/K4Mobility/stream
 
 go 1.18
 

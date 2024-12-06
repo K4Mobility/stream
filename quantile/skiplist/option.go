@@ -5,7 +5,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/alexander-yu/stream/quantile/order"
+	"github.com/K4Mobility/stream/quantile/order"
 )
 
 // MaxLevelOption creates an option that sets the max level for a skiplist.

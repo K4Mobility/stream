@@ -1,6 +1,6 @@
 package avl
 
-import "github.com/alexander-yu/stream/quantile/order"
+import "github.com/K4Mobility/stream/quantile/order"
 
 // Tree implements an AVL tree data structure,
 // and also satisfies the ost.Tree interface,
